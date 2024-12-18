@@ -6,36 +6,39 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD367F1C2D13033200F110D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD367F132D13033200F110D8 /* Assets.xcassets */; };
+		BD367F1E2D13033200F110D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD367F162D13033200F110D8 /* LaunchScreen.storyboard */; };
+		BD367F1F2D13033200F110D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD367F182D13033200F110D8 /* Main.storyboard */; };
+		BD367F202D13033200F110D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD367F122D13033200F110D8 /* AppDelegate.swift */; };
+		BD367F212D13033200F110D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD367F192D13033200F110D8 /* SceneDelegate.swift */; };
+		BD367F222D13033200F110D8 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD367F1A2D13033200F110D8 /* TodoListViewController.swift */; };
+		BD367F272D13053700F110D8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD367F262D13053700F110D8 /* Category.swift */; };
+		BD367F292D13054900F110D8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD367F282D13054900F110D8 /* Item.swift */; };
+		BD367F312D1305F700F110D8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD367F302D1305F700F110D8 /* RealmSwift */; };
+		BD367F332D131BBD00F110D8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD367F322D131BBD00F110D8 /* CategoryViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BD367EFA2D13032800F110D8 /* Todoey-Realm-iOS18.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todoey-Realm-iOS18.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD367F122D13033200F110D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD367F132D13033200F110D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD367F142D13033200F110D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD367F152D13033200F110D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD367F172D13033200F110D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD367F192D13033200F110D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BD367F1A2D13033200F110D8 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		BD367F262D13053700F110D8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BD367F282D13054900F110D8 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BD367F322D131BBD00F110D8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BD367F0C2D13032800F110D8 /* Exceptions for "Todoey-Realm-iOS18.1" folder in "Todoey-Realm-iOS18.1" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = BD367EF92D13032800F110D8 /* Todoey-Realm-iOS18.1 */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		BD367EFC2D13032800F110D8 /* Todoey-Realm-iOS18.1 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				BD367F0C2D13032800F110D8 /* Exceptions for "Todoey-Realm-iOS18.1" folder in "Todoey-Realm-iOS18.1" target */,
-			);
-			path = "Todoey-Realm-iOS18.1";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BD367EF72D13032800F110D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD367F312D1305F700F110D8 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +48,7 @@
 		BD367EF12D13032700F110D8 = {
 			isa = PBXGroup;
 			children = (
-				BD367EFC2D13032800F110D8 /* Todoey-Realm-iOS18.1 */,
+				BD367F1B2D13033200F110D8 /* Todoey-Realm-iOS18.1 */,
 				BD367EFB2D13032800F110D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +59,47 @@
 				BD367EFA2D13032800F110D8 /* Todoey-Realm-iOS18.1.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BD367F1B2D13033200F110D8 /* Todoey-Realm-iOS18.1 */ = {
+			isa = PBXGroup;
+			children = (
+				BD367F122D13033200F110D8 /* AppDelegate.swift */,
+				BD367F192D13033200F110D8 /* SceneDelegate.swift */,
+				BD367F252D13034600F110D8 /* DataModel */,
+				BD367F242D13034100F110D8 /* View */,
+				BD367F232D13033A00F110D8 /* Controller */,
+				BD367F132D13033200F110D8 /* Assets.xcassets */,
+				BD367F142D13033200F110D8 /* Info.plist */,
+			);
+			path = "Todoey-Realm-iOS18.1";
+			sourceTree = "<group>";
+		};
+		BD367F232D13033A00F110D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD367F322D131BBD00F110D8 /* CategoryViewController.swift */,
+				BD367F1A2D13033200F110D8 /* TodoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD367F242D13034100F110D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD367F182D13033200F110D8 /* Main.storyboard */,
+				BD367F162D13033200F110D8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD367F252D13034600F110D8 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD367F262D13053700F110D8 /* Category.swift */,
+				BD367F282D13054900F110D8 /* Item.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,11 +117,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				BD367EFC2D13032800F110D8 /* Todoey-Realm-iOS18.1 */,
-			);
 			name = "Todoey-Realm-iOS18.1";
 			packageProductDependencies = (
+				BD367F302D1305F700F110D8 /* RealmSwift */,
 			);
 			productName = "Todoey-Realm-iOS18.1";
 			productReference = BD367EFA2D13032800F110D8 /* Todoey-Realm-iOS18.1.app */;
@@ -107,6 +149,9 @@
 			);
 			mainGroup = BD367EF12D13032700F110D8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BD367F2F2D1305F700F110D8 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BD367EFB2D13032800F110D8 /* Products */;
 			projectDirPath = "";
@@ -122,6 +167,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD367F1C2D13033200F110D8 /* Assets.xcassets in Resources */,
+				BD367F1E2D13033200F110D8 /* LaunchScreen.storyboard in Resources */,
+				BD367F1F2D13033200F110D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +180,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD367F292D13054900F110D8 /* Item.swift in Sources */,
+				BD367F202D13033200F110D8 /* AppDelegate.swift in Sources */,
+				BD367F212D13033200F110D8 /* SceneDelegate.swift in Sources */,
+				BD367F222D13033200F110D8 /* TodoListViewController.swift in Sources */,
+				BD367F332D131BBD00F110D8 /* CategoryViewController.swift in Sources */,
+				BD367F272D13053700F110D8 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD367F162D13033200F110D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD367F152D13033200F110D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BD367F182D13033200F110D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD367F172D13033200F110D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BD367F0E2D13032800F110D8 /* Debug */ = {
@@ -333,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD367F2F2D1305F700F110D8 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD367F302D1305F700F110D8 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD367F2F2D1305F700F110D8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD367EF22D13032800F110D8 /* Project object */;
 }

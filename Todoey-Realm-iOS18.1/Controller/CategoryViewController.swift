@@ -18,6 +18,9 @@ class CategoryViewController: UITableViewController {
         super.viewDidLoad()
         
         loadCategories()
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressOnCategory(_:)))
+        tableView.addGestureRecognizer(longPressGesture)
     }
     
     //MARK: - TableView DataSource Methods
@@ -84,6 +87,7 @@ class CategoryViewController: UITableViewController {
             newCategory.name = textField.text!
             
             self.save(category: newCategory)
+            self.tableView.reloadData()
         }
         
         alert.addAction(action)
@@ -93,6 +97,36 @@ class CategoryViewController: UITableViewController {
             textField.placeholder = "Add a new category"
         }
         present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: - Delete a category
+    
+    @objc func longPressOnCategory(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        let touchPoint = gestureRecognizer.location(in: tableView)
+
+        if let indexPath = tableView.indexPathForRow(at: touchPoint), gestureRecognizer.state == .began {
+            let alert = UIAlertController(title: "Delete Category", message: "Do you want to delete this category and all its items?", preferredStyle: .alert)
+
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+                if let categoryToDelete = self.categories?[indexPath.row] {
+                    do {
+                        try self.realm.write {
+                            self.realm.delete(categoryToDelete.items) // Delete all associated items first
+                            self.realm.delete(categoryToDelete)      // Then delete the category
+                        }
+                    } catch {
+                        print("Error deleting category: \(error)")
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+            alert.addAction(deleteAction)
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
+        }
     }
     
 }

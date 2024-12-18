@@ -23,7 +23,11 @@ class TodoListViewController: UITableViewController {
         super.viewDidLoad()
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressOnItem(_:)))
+        tableView.addGestureRecognizer(longPressGesture)
     }
+    
     
     //MARK: - TableView DataSource Methods
     
@@ -95,6 +99,36 @@ class TodoListViewController: UITableViewController {
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: - Delete items
+    
+    @objc func longPressOnItem(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        
+        let touchPoint = gestureRecognizer.location(in: tableView)
+
+        if let indexPath = tableView.indexPathForRow(at: touchPoint), gestureRecognizer.state == .began {
+            let alert = UIAlertController(title: "Delete Item", message: "Do you want to delete this item?", preferredStyle: .alert)
+
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+                if let itemToDelete = self.todoItems?[indexPath.row] {
+                    do {
+                        try self.realm.write {
+                            self.realm.delete(itemToDelete)
+                        }
+                    } catch {
+                        print("Error deleting item: \(error)")
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+            alert.addAction(deleteAction)
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
+        }
     }
     
     //MARK: - Model Manipulation Methods
